@@ -1,12 +1,16 @@
 str = input()
 res = 0
+skip = False
 
 for i in range(len(str)):
-    if(i!=len(str)-1 and str[i+1]!='0'):
-        res += int(str[i])
-    elif(i!=len(str)-1 and str[i+1]=='0'):
+    if skip:
+        skip=False
+        continue
+    
+    if i+1<len(str) and str[i+1] == '0':
         res += int(str[i:i+2])
-        i+=1
+        skip=True
+
     else:
         res += int(str[i])
 
