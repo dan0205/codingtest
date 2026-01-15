@@ -1,0 +1,7 @@
+pi = 3.141593
+
+r = int(input())
+
+print(f"{r**2*pi:.6f}")
+print(f"{r**2*2:.6f}")
+
