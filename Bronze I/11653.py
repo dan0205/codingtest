@@ -7,13 +7,9 @@ def _find_mod(N: int) -> dict:
 
 N=int(input())
 
-if N==1:
+if N<=1:
     exit()
-
 
 while N != 0:
     N,M = _find_mod(N)
     print(M)
-
-            
-    
